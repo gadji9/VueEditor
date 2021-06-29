@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <vredactor/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import vredactor from './components/v-redactor'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    vredactor
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body{
+    background-color: rgb(30,30,30);
+  }
+  .container{
+  padding:5% 0 0 0;
+  }
+  @media (max-width: 575px) {
+    .container{
+      padding: 5% 0 0 0 !important;
+    }
+    .tool-bar{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
 </style>
